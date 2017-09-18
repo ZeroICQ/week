@@ -48,7 +48,7 @@
         var minutes = Math.floor((timeLeft % 3600000) / 60000);
         var seconds = Math.floor((timeLeft % 60000) / 1000);
 
-        clockPlaceholder.textContent = hours + ":" + minutes + ":" + seconds + " пара: " + para;
+        clockPlaceholder.textContent = hours + ":" + minutes + ":" + seconds;
     };
 
     function loadFile(filePath, done) {
