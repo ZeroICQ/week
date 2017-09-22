@@ -12,14 +12,10 @@
 
     // document.getElementById('out').textContent = isUpper ? "Верхняя" : "Нижняя";
 
-    var bells;
 
-    loadFile("data/bells.json", function(bellsString) {
-        bells = JSON.parse(bellsString);
+    var clockPlaceholder = document.getElementById("clock-time");
+    var updateClockTimer = setInterval(updateClock, 1000, clockPlaceholder);
 
-        var clockPlaceholder = document.getElementById("clock-time");
-        var updateClockTimer = setInterval(updateClock, 1000, clockPlaceholder);
-    });
 
     function updateClock(clockPlaceholder) {
         var minIndex = bells.length;
@@ -50,12 +46,4 @@
 
         clockPlaceholder.textContent = hours + ":" + minutes + ":" + seconds;
     };
-
-    function loadFile(filePath, done) {
-        var xhr = new XMLHttpRequest();
-        xhr.onload = function () { return done(this.responseText) };
-        xhr.open("GET", filePath, true);
-        xhr.send();
-    };
-
 })();
