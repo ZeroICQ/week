@@ -263,10 +263,10 @@ var timetable = [
     [
         {
             "order": 1,
-            "name": "",
+            "name": "Численные методы",
             "teacher": "",
-            "type": "",
-            "room": ""
+            "type": "ЛР",
+            "room": "D549а"
         },
         [
         {
